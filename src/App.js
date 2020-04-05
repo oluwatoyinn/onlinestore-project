@@ -2,10 +2,11 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar';
-import Cart from './components/Cart';
+import Cart from './components/CartFolder/Cart';
 import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Defaults from './components/Defaults';
+import Modal from "./components/Modal"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route  path="/cart" component={Cart} />
       <Route component={Defaults} />
     </Switch>
+    <Modal />
     </>
   );
 }

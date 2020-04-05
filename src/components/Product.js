@@ -13,15 +13,21 @@ import PropTypes from "prop-types"
                 <ProductConsumer>
                     {(value) =>(
                         <div className="img_container p-5" onClick={() =>value.handleDetail(id) }>
-                        <Link to="/details">
-                            <img src={img} alt="product" className="card-img-top" />
-                        </Link>
-                        <button className="cart-btn" disabled={inCart?true:false} onClick={() =>value.addToCart}>
-                        {inCart? (<p className="text-capitalize mb-0" disabled> inCart </p>):(<i className="fas fa-cart-plus" />)}
-                        </button>
-                    </div>
+                            <Link to="/details">
+                                <img src={img} alt="product" className="card-img-top" />
+                            </Link>
+                            <button className="cart-btn" 
+                            disabled={inCart ? true : false} 
+                            onClick={() => {
+                                value.addToCart(id);
+                                value.openModal(id)
+                                }}
+                            >
+                            {inCart ? (<p className="text-capitalize mb-0" disabled> {" "} in cart </p>) : (<i className="fas fa-cart-plus" />)}
+                            </button>
+                        </div>
                     )} 
-            </ProductConsumer>
+                </ProductConsumer>
 
                     {/* card footer */}
                     <div className="card-footer d-flex justify-content-between">
