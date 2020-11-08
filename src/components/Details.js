@@ -32,7 +32,7 @@ export class Details extends Component {
                                 </h4>
                                 <h4 className="text-blue ">
                                     <strong>
-                                        price : <span>$</span>
+                                        price : <span>#</span>
                                         {price}
                                     </strong>
                                 </h4>

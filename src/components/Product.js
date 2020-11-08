@@ -35,7 +35,7 @@ import PropTypes from "prop-types"
                             {title}
                         </p>
                         <h5 className="text-blue font-italic mb-0">
-                            <span className="mr-1">$</span>
+                            <span className="mr-1">#</span>
                             {price}
                         </h5>
                     </div>
