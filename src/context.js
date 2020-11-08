@@ -33,7 +33,7 @@ setProducts=() =>{
 }
 
 getItem = (id) =>{
-    const product = this.state.products.find(item => item.id === id);
+    const product = this.state.products.find(item => item.id === id); 
     return product;
 }
 
